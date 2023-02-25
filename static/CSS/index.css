@@ -1,0 +1,26 @@
+.loginContainer {
+    height: '90vh';
+    display: 'flex';
+    flex-direction: 'column';
+    justify-content: 'center';
+    align-items: 'center';
+}
+
+.ally-btn {
+    background-image: linear-gradient(to left bottom, #ff7b1c, #ff9000, #ff652e, #ff344c, #ff4e3d);
+    border: none;
+    border-radius: 1rem;
+}
+
+.image{
+    width: 300px;
+}
+
+.active{
+    background-color: #ff344c;
+}
+
+.profile{
+    border: 2px solid black;
+    border-radius: 50%;
+}

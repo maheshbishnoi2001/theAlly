@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Login{% endblock title %}
+
+{% block body %}
+<div class="container w-75">
+    <div class="row">
+        <div class='col'>
+            <div class='loginContainer my-4'>
+                <img src="{% static 'images/login.png' %}" class="image my-4">
+                <div class="h2">Not a member yet?</div>
+                <div class="text-muted">Sign up and discover a great <br /> amount of new oppurtunities!</div>
+                <a href="signup" class='btn btn-primary ally-btn my-4'>Signup</a>
+            </div>
+        </div>
+        <div class='col'>
+            <div class='loginContainer my-4'>
+                <div class="h1 text-center" style="font-size: '4rem'; margin-top: 5rem;">Welcome back</div>
+                <div class='row justify-content-center my-4'>
+                    <h4 class="text-center" style="font-weight: 'bold';">Login to theAlly</h4>
+                </div>
+
+                {% if error %}
+                    <div class="alert alert-danger" role="alert">
+                        {{status}}
+                    </div>
+                {% endif %}
+
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="row form-group my-4">
+                        <label for="email">Email address <span class="text-danger">*</span></label>
+                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email"
+                            placeholder="Enter email" required>
+                    </div>
+                    <div class="row form-group mb-2">
+                        <label for="password">Password <span class="text-danger">*</span></label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Password"
+                            required>
+                    </div>
+                    <div class="row">
+                        <button type="submit" class="btn btn-primary ally-btn my-4">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}
