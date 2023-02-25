@@ -1,5 +1,9 @@
 # theAlly
 
+Admin protel username and password is
+username= admin
+password= admin
+
 Some Sample screenshots
 
 <img width="1440" alt="Screenshot 2023-02-26 at 1 12 38 AM" src="https://user-images.githubusercontent.com/119396691/221376959-cbc099c4-86a8-4e81-8ce6-37ea0412963f.png">
